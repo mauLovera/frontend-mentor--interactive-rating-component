@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -9,17 +9,18 @@ const config: Config = {
   theme: {
     colors: {
       primary: {
-        "orange": "hsl(25, 97%, 53%)"
+        orange: "hsl(25, 97%, 53%)",
       },
       neutral: {
-        "white": "hsl(0, 0%, 100%)",
+        white: "hsl(0, 0%, 100%)",
         "light-grey": "hsl(217, 12%, 63%)",
         "medium-grey": "hsl(216, 12%, 54%)",
-        "dark-blue": "hsl(213, 19%, 18%)",
-        "very-dark-blue": "hsl(216, 12%, 8%)",
+        "dark-blue": "hsl(215, 18%, 19%)",
+        "very-dark-blue": "hsl(216, 20%, 16%)",
+        "black": "hsl(228, 11%, 9%)",
       },
-    }
+    },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

@@ -14,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sans.className}>{children}</body>
+      <body
+        className={`${sans.className} bg-neutral-black flex min-h-screen flex-col items-center justify-center text-neutral-white`}
+      >
+        {children}
+      </body>
     </html>
   )
 }

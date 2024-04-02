@@ -59,7 +59,7 @@ export default function Form() {
 
   return (
     <form
-      className=" relative flex max-w-[413px] flex-col rounded-[30px] bg-neutral-very-dark-blue p-[35px]"
+      className=" relative flex max-w-[415px] flex-col rounded-[30px] bg-neutral-very-dark-blue p-[32px]"
       onSubmit={handleFormSubmit}
     >
       <div

@@ -58,18 +58,24 @@ export default function Form() {
   })
 
   return (
-    <form
-      className=" relative flex max-w-[415px] flex-col rounded-[30px] bg-neutral-very-dark-blue p-[32px]"
-      onSubmit={handleFormSubmit}
-    >
+    <>
       <div
-        className={`absolute -top-10 left-5 rounded-[30px] px-3 opacity-0 ring-2 ring-neutral-very-dark-blue ${formData.errors.rating && "opacity-100"} transition-opacity duration-100`}
+        className={`mb-4 w-full rounded-[30px] px-3 py-1 opacity-0 ring-2 ring-neutral-very-dark-blue ${formData.errors.rating && "opacity-100"} text-center transition-opacity duration-100`}
       >
-        <span className={"relative top-0.5 text-primary-orange"}>
+        <span
+          className={
+            "relative top-0.5 text-sm text-primary-orange sm:text-base"
+          }
+        >
           Please select a rating before attempting to procced
         </span>
       </div>
-      {currentStep}
-    </form>
+      <form
+        className=" relative flex max-w-[415px] flex-col rounded-[30px] bg-neutral-very-dark-blue p-[32px]"
+        onSubmit={handleFormSubmit}
+      >
+        {currentStep}
+      </form>
+    </>
   )
 }

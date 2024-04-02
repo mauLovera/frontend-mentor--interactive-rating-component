@@ -1,33 +1,33 @@
 import { useState } from 'react'
 
 interface Props {
-  views: React.ReactNode[]
+  steps: React.ReactNode[]
 }
 
 /**
- * @function useMultiViewForm
- * @returns Methods for navigating through a multi-view form.
- * @params {views: ReactNode[]} An array of React Elements
+ * @function useMultiStepForm
+ * @returns Methods for navigating through a multi-step form.
+ * @params {steps: ReactNode[]} An array of React Elements
  * */
 
-export default function useMultiStepForm({ views }: Props) {
+export default function useMultiStepForm({ steps }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   /**
    * @method next
-   * @description Increment the current view index.
+   * @description Increment the current step index.
    **/
 
   function next() {
     setCurrentIndex((i) => {
-      if (i >= views.length - 1) return i
+      if (i >= steps.length - 1) return i
       return i + 1
     })
   }
 
   /**
    * @method back
-   * @description Decrement the current view index.
+   * @description Decrement the current step index.
    **/
 
   function back() {
@@ -39,12 +39,12 @@ export default function useMultiStepForm({ views }: Props) {
 
   /**
    * @method goTo
-   * @description Go to the passed index within views array.
+   * @description Go to the passed index within steps array.
    **/
 
   function goTo(index: number) {
     setCurrentIndex((i) => {
-      if (index > views.length - 1 || index < 0) return i
+      if (index > steps.length - 1 || index < 0) return i
       return index
     })
   }
@@ -57,14 +57,14 @@ export default function useMultiStepForm({ views }: Props) {
    */
 
   function getProgress(): number {
-    return ((currentIndex + 1) / views.length) * 100
+    return ((currentIndex + 1) / steps.length) * 100
   }
 
   return {
     currentIndex,
-    currentView: views[currentIndex],
+    currentStep: steps[currentIndex],
     isStart: currentIndex === 0,
-    isEnd: currentIndex === views.length - 1,
+    isEnd: currentIndex === steps.length - 1,
     next, 
     back,
     goTo,

@@ -11,7 +11,7 @@ export default function SuccessStep({ rating }: { rating: string }) {
           You selected {rating} out of 5
         </span>
       </div>
-      <h2 className="text-center text-[28px] mb-4">Thank you!</h2>
+      <h2 className="text-center text-[28px] mb-4 font-bold">Thank you!</h2>
       <p className="text-center text-neutral-light-grey">
         We appreciate you taking the time to give a rating. If you ever need
         more support, don&apos;t hesitate to get in touch!

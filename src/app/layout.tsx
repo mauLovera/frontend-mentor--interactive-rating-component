@@ -15,9 +15,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sans.className} bg-neutral-black flex min-h-screen flex-col items-center justify-center text-neutral-white px-6`}
+        className={`${sans.className} flex min-h-screen flex-col items-center justify-center bg-neutral-black px-6 text-neutral-white`}
       >
         {children}
+        <footer className="text-neutral-dark-grayish-blue mt-6 text-sm text-center text-neutral-light-grey">
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            className="text-primary-orange underline"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by{" "}
+          <a
+            href="https://github.com/mauLovera"
+            className="text-primary-orange underline"
+          >
+            Mauricio Lovera
+          </a>
+          .
+        </footer>
       </body>
     </html>
   )
